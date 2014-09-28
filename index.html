@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Test App</title>
+</head>
+<body ng-app='TestDemoApp'>
+
+    <div ng-view></div>
+
+    <div ng-controller='VideosController'>
+        <h1>My Videos</h1>
+        
+        <div ng-repeat="video in videos">
+            <div>{{video}}</div>
+        </div>
+    </div>
+
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="app/module.js"></script>
+      <script src="app/controllers/VideosController.js"></script
+</body>
+</html>
