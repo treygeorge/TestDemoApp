@@ -15,7 +15,11 @@ describe('VideosController', function() {
         });
     }));
 
-    it("should set scope.videos on instantiation", function() {
+    it("should set scope.videos on instantiation", inject(function($httpBackend) {
+        $httpBackend.expectGET('/data/videos.json').respond([{}]);
+
+        $httpBackend.flush();
+
         expect(scope.videos).toBeDefined();
-    });
+    }));
 });
