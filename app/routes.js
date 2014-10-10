@@ -1,7 +1,19 @@
+'use strict';
+
 angular.module('TestDemoApp').config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/videos', {
+
+    $routeProvider
+    .when('/', {
+        templateUrl: 'app/views/index.html'
+    })
+    .when('/videos', {
         templateUrl: 'app/views/videos/index.html',
         controller: 'VideosController'
     })
-    .otherwise({redirectTo: '/videos'});
+    .when('/textSearch', {
+        templateUrl: 'app/views/text-search/index.html',
+        controller: 'TextSearchController'
+    })
+    .otherwise({redirectTo: '/'});
+
 }]);
