@@ -8,9 +8,10 @@ gulp.task('default', function() {
 });
 
 gulp.task('start', function(done) {
+    console.log('dirname: ', __dirname);
     http.createServer(
         ecstatic({ root: __dirname + '/' })
-        ).listen(8080);
+    ).listen(8080);
 
     console.log('Listening on :8080');
 });

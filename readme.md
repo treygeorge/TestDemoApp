@@ -17,7 +17,7 @@
 
 * string.repeatify() - implement this.  Tests that they know to String.prototype.repeatify = function() {}
 
-*define a log() that will act as a proxy to console.log().  I should be able to pass any number of args into the function and have them all show up in console.log()
+* define a log() that will act as a proxy to console.log().  I should be able to pass any number of args into the function and have them all show up in console.log()
 	function log(){
 		console.log.apply(console, arguments);
 	};  //this tests .apply() and arguments
