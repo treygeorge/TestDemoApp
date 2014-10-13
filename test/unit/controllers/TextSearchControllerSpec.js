@@ -15,7 +15,7 @@ describe('TextSearchController', function() {
         });
     }));
 
-    it("should find 2 occurances of uh in the article", function() {
+    /*it("should find 2 occurances of uh in the article", function() {
         scope.search = 'uh';
         expect(scope.occurances == 2);
     });
@@ -28,5 +28,5 @@ describe('TextSearchController', function() {
     it("should find 6 occurances of uh in the article", function() {
         scope.search = 'constituent';
         expect(scope.occurances == 6);
-    });
+    });*/
 });
