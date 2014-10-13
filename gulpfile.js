@@ -16,10 +16,11 @@ gulp.task('start', function(done) {
     console.log('Listening on :8080');
 });
 
-gulp.task('test', function (done) {
+gulp.task('test', function () {
     karma.start({
         configFile: __dirname + '/karma.conf.js',
         singleRun: true,
+        autoWatch: false,
         reporters: ['progress', 'osx']
-    }, done);
+    });
 });
