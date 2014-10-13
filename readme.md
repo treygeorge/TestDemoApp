@@ -1,5 +1,6 @@
 #Tasks#
 ##Javascript##
+* FizzBuzz
 * Display a list of videos.
 * Click on a video to view more details about the video.
 * Search for specific video.
@@ -11,9 +12,6 @@
 
 #Other Ideas#
 * Coding a clock - https://coderwall.com/p/gnjg_w
-* Fizzbuzz
-* Videos app - angular js - https://github.com/treygeorge/TestDemoApp
-**	Tests unit testing.  Frontend tools (karma, npm, bower, gulp)
 
 * string.repeatify() - implement this.  Tests that they know to String.prototype.repeatify = function() {}
 

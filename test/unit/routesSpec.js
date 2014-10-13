@@ -28,6 +28,16 @@ describe("Routes", function () {
 
         verifyNothingOutstanding($httpBackend);
     }));
+
+    it("should request views/fizz-buzz/index.html for /fizzbuzz route", inject(function($rootScope, $route, $location, $httpBackend) {
+        $httpBackend.expectGET('app/views/fizz-buzz/index.html').respond('FizzBuzz view');
+
+        $location.path('/fizzbuzz');
+        $rootScope.$digest();
+        $httpBackend.flush();
+
+        verifyNothingOutstanding($httpBackend);
+    }));
 });
 
 function verifyNothingOutstanding($httpBackend) {

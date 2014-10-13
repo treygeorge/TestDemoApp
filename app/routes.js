@@ -14,6 +14,10 @@ angular.module('TestDemoApp').config(['$routeProvider', function($routeProvider)
         templateUrl: 'app/views/text-search/index.html',
         controller: 'TextSearchController'
     })
+    .when('/fizzbuzz', {
+        templateUrl: 'app/views/fizz-buzz/index.html',
+        controller: 'FizzBuzzController'
+    })
     .otherwise({redirectTo: '/'});
 
 }]);
