@@ -6,7 +6,8 @@ angular.module('TestDemoApp').controller('VideosController', ['$scope', '$http',
 
     $http.get('https://api.vimeo.com/groups/275943/videos?page=1&per_page=50')
     .success(function(data) {
+        $scope.videos = data;
         console.log('videos for group 275943', data);
     });
-    
+
 }]);
