@@ -2,7 +2,7 @@
 
 angular.module('TestDemoApp').controller('TextSearchController', ['$scope', function($scope) {
 
-  //count the number of occurances the text in the box appears.
+  // Count the number of occurrences the text in the box appears.
   $scope.occurances = 2;
 
 }]);

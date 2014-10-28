@@ -10,7 +10,7 @@ angular.module('TestDemoApp').config(['$routeProvider', function($routeProvider)
         templateUrl: 'app/views/videos/index.html',
         controller: 'VideosController'
     })
-    .when('/textSearch', {
+    .when('/text-search', {
         templateUrl: 'app/views/text-search/index.html',
         controller: 'TextSearchController'
     })
