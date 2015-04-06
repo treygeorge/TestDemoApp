@@ -23,13 +23,13 @@ describe('TextSearchController', function() {
     //     expect(scope.occurrences == 2);
     // });
     // 
-    // it("should find 17 occurrences of 'the' in the article", function() {
+    //it("should find 17 occurrences of 'the' in the article", function() {
     //     scope.search = 'the';
-    //     
-    //     scope.texthChange();
-    //     
+    //
+    //     scope.textChange();
+    //
     //     expect(scope.occurrences).toEqual(17);
-    // });
+    //});
     // 
     // it("should find 6 occurrences of 'constituent' in the article", function() {
     //     scope.search = 'constituent';
