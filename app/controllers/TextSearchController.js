@@ -4,8 +4,23 @@ angular.module('TestDemoApp').controller('TextSearchController', ['$scope', func
 
   // Count the number of occurrences the text in the box appears.
   $scope.textChange = function() {
+        var tLength = $scope.search.length;
+    // the text to search for
     //   $scope.search;
+        var fLength = $scope.searchText.length;
+
+      //text to search against
     //   $scope.searchText;
+
+        var nSearch = new RegExp($scope.search, 'g');
+
+        var rSearch = $scope.searchText.replace(nSearch, "");
+
+        var nLength = rSearch.length;
+
+
+      $scope.occurrences = ((fLength - nLength) / tLength);
+      //return var
     //   $scope.occurrences;
   };
 

@@ -1,5 +1,91 @@
+<style type="text/css">
+
+    html, body {
+        width: 100%;
+        margin: 0;
+        background-color:gray;
+    }
+
+    #card {
+        width: 840px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .subCard {
+        width: calc(840px / 3);
+        display: inline-block;
+        float: left;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        box-shadow: 0 0 5px black inset;
+        box-sizing: border-box;
+    }
+
+    .subCard h1 a {
+        text-decoration: none;
+        color: #FF0000;
+        font-size: 25px;
+    }
+
+    .hidden {
+        display:none;
+    }
+
+    .carat {
+        width:48px;
+        height:48px;
+        margin-left:auto;
+        margin-right:auto;
+        background-color:gray;
+        box-shadow:0 0 5px black;
+        margin:5px;
+    }
+
+    .carat img {
+        width:40px;
+        height:40px;
+    }
+
+    @media (max-width:1024px) {
+        #card {
+            width:100%;
+        }
+
+        .subCard{
+            width:100%;
+            clear:both;
+        }
+    }
+</style>
+
+
+<script>
+    $(function() {
+        console.log('DOM ready');
+        var show = false;
+        $('.subCard').on('click', function(){
+            console.log('got click');
+            if (show == false){
+                $('.subCard p').show();
+                $('.subCard hr').show();
+                show = true;
+            }
+            else{
+                $('.subCard p').hide();
+                $('.subCard hr').hide();
+                show = false;
+            }
+        });
+    });
+</script>
+
 <h1>My Videos</h1>
 
-<div ng-repeat="video in videos">
-    <div>{{video.name}}</div>
+<div id="card" ng-repeat="video in videos">
+    <div class="subCard" ><h1><a href="{{video.link}}">{{video.name}}</a><span ng-click="clicked()" class="carat"><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-128.png" alt="reveal" /></span></h1><div class="hidden"><hr><p>{{video.description}}</p></div></div>
 </div>
+
+
