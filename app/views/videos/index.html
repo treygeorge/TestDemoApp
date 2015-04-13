@@ -1,5 +1,75 @@
+<style>
+    body{
+        background: url("http://www.psdgraphics.com/file/christmas-graphic.jpg") no-repeat fixed;
+        background-size:1228px 750px;
+
+    }
+    .cards{
+        border: 2px solid coral;
+    border-radius:3px;
+        float:left;
+        display: inline-block;
+        margin:20px;
+        background-color: #add8e6;
+        text-align:center;
+        width:40%;
+        height: 200px;
+        overflow: hidden;
+        box-shadow: 1.5px 2px 2px lightcoral;
+        position: relative;
+
+    }
+    @media screen and (max-width:1000px){
+        .cards{
+            width:100%;
+            margin: 20px 0;
+
+        }
+
+    }
+    .cards h2{
+        font-family: Georgia;
+        border-bottom: 2px solid darkgreen;
+        background-color: #219161;
+        margin-top:0;
+        min-height: 50%;
+        color:whitesmoke;
+        border-radius:0 3px 0 0;
+    }
+    .cards p{
+        margin: 0 20px;
+        font-size:0.8em;
+        text-align: justify;
+
+
+    }
+
+    h2 span{
+        vertical-align: middle;
+    }
+
+    .cards img{
+        position: absolute;
+        top:75px;
+        right:3px;
+        width:50px;
+        height:50px;
+    }
+
+
+
+</style>
+
+
 <h1>My Videos</h1>
 
-<div ng-repeat="video in videos">
-    <div>{{video.name}}</div>
+<div ng-repeat="video in videos" class="container">
+    <div class="cards">
+
+        <h2><span>{{video.name}}</span> </h2>
+        <p>{{video.description}}</p>
+        <img src="http://png-2.findicons.com/files/icons/1014/ivista/256/arrow_down.png">
+
+
+    </div>
 </div>
