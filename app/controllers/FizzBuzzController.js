@@ -2,8 +2,7 @@
 
 angular.module('TestDemoApp').controller('FizzBuzzController', ['$scope', function($scope) {
 
-    $scope.fizzBuzz = function(numInts) {
+    $scope.fizzBuzz = function(num) {
     };
-
-    $scope.fizzBuzz(15);
+    
 }]);
